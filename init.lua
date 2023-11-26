@@ -513,7 +513,7 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
@@ -607,4 +607,7 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- This is setting specific for me
 vim.keymap.set({"i", "v"}, "qq", "<ESC>", { silent = true })
+vim.keymap.set({"t"}, "qq", "<C-\\><C-n>", { silent = true })
+vim.opt.splitright = true
