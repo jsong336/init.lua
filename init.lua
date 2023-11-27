@@ -216,6 +216,17 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -513,7 +524,8 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  pyright = {},
+  -- pyright = {},
+  pylsp = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
@@ -608,6 +620,6 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- This is setting specific for me
-vim.keymap.set({"i", "v"}, "qq", "<ESC>", { silent = true })
-vim.keymap.set({"t"}, "qq", "<C-\\><C-n>", { silent = true })
+vim.keymap.set({ "i", "v" }, "qq", "<ESC>", { silent = true })
+vim.keymap.set({ "t" }, "qq", "<C-\\><C-n>", { silent = true })
 vim.opt.splitright = true
