@@ -595,9 +595,11 @@ local servers = {
     -- pyright = {},
     pylsp = {},
     -- rust_analyzer = {},
-    -- tsserver = {},
-    -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+    tsserver = {},
 
+    html = { filetypes = { 'html', 'twig', 'hbs'} },
+    helm_ls = {},
+    terraformls = {},
     lua_ls = {
         Lua = {
             workspace = {
@@ -697,6 +699,10 @@ vim.keymap.set({"i", "v"}, "qq", "<ESC>", {
 vim.keymap.set({"t"}, "qq", "<C-\\><C-n>", {
     silent = true
 })
+vim.keymap.set({"n"}, "t", "<cmd>NvimTreeToggle<cr>", {
+    silent = true
+})
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.autoread = true
+
