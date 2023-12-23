@@ -705,4 +705,7 @@ vim.keymap.set({"n"}, "t", "<cmd>NvimTreeToggle<cr>", {
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.autoread = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
