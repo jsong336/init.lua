@@ -406,6 +406,9 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, {
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, {
     desc = '[S]earch [R]esume'
 })
+vim.keymap.set('n', '<leader>lr', require('telescope.builtin').lsp_references, {
+    desc = "[L]sp [R]eference"
+})
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -695,9 +698,9 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- This is setting specific for me
-vim.keymap.set({"i", "v"}, "qq", "<ESC>", {
-    silent = true
-})
+-- vim.keymap.set({"i", "v"}, "qq", "<ESC>", {
+--     silent = true
+-- })
 vim.keymap.set({"t"}, "qq", "<C-\\><C-n>", {
     silent = true
 })
